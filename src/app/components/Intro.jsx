@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Intro() {
   return (
-    <div className=" w-full h-screen flex flex-col">
+    <div className=" w-full h-screen flex flex-col border-b-2 border-gray-300">
     {/* Pathii Section with Background Image */}
     <div
       className=" bg-cover bg-center bg-no-repeat h-[60%]"
