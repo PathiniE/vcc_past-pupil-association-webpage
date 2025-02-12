@@ -202,7 +202,7 @@ const MobileNewsCard = ({ title, description, image }) => (
     <div className="aspect-[16/9] w-full">
       <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover bg-gray-100" />
     </div>
-    <div className="bg-green-300 p-4 text-center">
+    <div className=" p-4 text-center">
       <p className="text-xs text-gray-600 mb-2">TagLine</p>
       <h2 className="text-xl font-bold mb-2 line-clamp-2">{title}</h2>
       <p className="text-sm text-gray-600 mb-3 line-clamp-2">{description}</p>
