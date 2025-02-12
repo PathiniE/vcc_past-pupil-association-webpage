@@ -1,9 +1,10 @@
 import Footer from "../components/Footer";
-import Intro from "../components/Intro";
-import Journey from "../components/Journey";
-import { Navbar } from "../components/Navbar";
-import News from "../components/News";
-import President from "../components/President";
+import Committee from "../components/Home/Committee";
+import Intro from "../components/Home/Intro";
+import Journey from "../components/Home/Journey";
+import { Navbar } from "../components/Home/Navbar";
+import News from "../components/Home/News";
+import President from "../components/Home/President";
 
 
 export default function Hero() {
@@ -15,6 +16,7 @@ export default function Hero() {
       <President />
       <Journey />
       <News />
+      <Committee />
         
       </div>
     </div>
