@@ -6,9 +6,9 @@ import { ChevronRight, ChevronDown, ChevronUp } from "lucide-react"
 const News = () => {
   const [expanded, setExpanded] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [showAllMobile, setShowAllMobile] = useState(false)
   const scrollRef = useRef(null)
 
-  // Sample news items
   const newsItems = [
     {
       id: 1,
@@ -69,6 +69,12 @@ const News = () => {
       scrollContainer.addEventListener("scroll", handleScroll)
     }
 
+    // Reset activeIndex when toggling between 3 and all items
+    setActiveIndex(0)
+    if (scrollContainer) {
+      scrollContainer.scrollLeft = 0
+    }
+
     return () => {
       if (scrollContainer) {
         scrollContainer.removeEventListener("scroll", handleScroll)
@@ -81,6 +87,14 @@ const News = () => {
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-3 sm:mt-0">Latest News & Updates</h1>
         <p className="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        {/* View All button - mobile only */}
+        <button
+          className="md:hidden flex items-center justify-center mx-auto mt-4 px-6 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50"
+          onClick={() => setShowAllMobile(!showAllMobile)}
+        >
+          <span>{showAllMobile ? "Show Less" : "View All"}</span>
+          <ChevronRight className="w-4 h-4 ml-1" />
+        </button>
       </div>
 
       {/* Desktop Layout */}
@@ -107,7 +121,7 @@ const News = () => {
           </div>
         </div>
 
-        {/* Expanded Content */}
+        {/* Expanded Content - Desktop Only */}
         {expanded && (
           <div className="mt-4 grid grid-cols-2 gap-4">
             {displayedItems.slice(4).map((item) => (
@@ -116,6 +130,27 @@ const News = () => {
               </div>
             ))}
           </div>
+        )}
+
+        {/* Show More/Less Buttons - Desktop Only */}
+        {!expanded && newsItems.length > 4 && (
+          <button
+            onClick={() => setExpanded(true)}
+            className="flex items-center justify-center w-full py-4 mt-8 space-x-2"
+          >
+            <span>Show More</span>
+            <ChevronDown className="w-4 h-4" />
+          </button>
+        )}
+
+        {expanded && (
+          <button
+            onClick={() => setExpanded(false)}
+            className="flex items-center justify-center w-full py-4 mt-8 space-x-2"
+          >
+            <span>Show Less</span>
+            <ChevronUp className="w-4 h-4" />
+          </button>
         )}
       </div>
 
@@ -126,7 +161,7 @@ const News = () => {
           className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {displayedItems.map((item) => (
+          {(showAllMobile ? newsItems : newsItems.slice(0, 3)).map((item) => (
             <div key={item.id} className="w-full flex-none snap-start">
               <MobileNewsCard {...item} />
             </div>
@@ -134,7 +169,7 @@ const News = () => {
         </div>
         {/* Pagination Dots */}
         <div className="flex justify-center mt-4 space-x-2">
-          {displayedItems.map((_, index) => (
+          {(showAllMobile ? newsItems : newsItems.slice(0, 3)).map((_, index) => (
             <div
               key={index}
               className={`h-2 w-2 rounded-full ${index === activeIndex ? "bg-blue-500" : "bg-gray-300"}`}
@@ -142,28 +177,6 @@ const News = () => {
           ))}
         </div>
       </div>
-
-      {/* Show More Button */}
-      {!expanded && newsItems.length > 4 && (
-        <button
-          onClick={() => setExpanded(true)}
-          className="flex items-center justify-center w-full py-4 mt-8 space-x-2"
-        >
-          <span>Show More</span>
-          <ChevronDown className="w-4 h-4" />
-        </button>
-      )}
-
-      {/* Show Less Button */}
-      {expanded && (
-        <button
-          onClick={() => setExpanded(false)}
-          className="flex items-center justify-center w-full py-4 mt-8 space-x-2"
-        >
-          <span>Show Less</span>
-          <ChevronUp className="w-4 h-4" />
-        </button>
-      )}
     </div>
   )
 }
@@ -186,16 +199,13 @@ const NewsCard = ({ title, description, image, isSmall }) => (
 
 const MobileNewsCard = ({ title, description, image }) => (
   <div className="w-full bg-white rounded-lg overflow-hidden flex flex-col h-full">
-    <div className="bg-green-300">
+    <div className="aspect-[16/9] w-full">
+      <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover bg-gray-100" />
+    </div>
+    <div className="bg-green-300 p-4 text-center">
       <p className="text-xs text-gray-600 mb-2">TagLine</p>
       <h2 className="text-xl font-bold mb-2 line-clamp-2">{title}</h2>
       <p className="text-sm text-gray-600 mb-3 line-clamp-2">{description}</p>
-      <button className="flex items-center text-xs mb-4">
-        View all <ChevronRight className="w-3 h-3 ml-1" />
-      </button>
-    </div>
-    <div className="mt-auto aspect-[16/9] w-full">
-      <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover bg-gray-100" />
     </div>
   </div>
 )
