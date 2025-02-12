@@ -11,13 +11,13 @@ export default function Intro() {
     </div>
 
     {/* Intro Section */}
-    <div className="flex-1 p-8 md:p-8 flex flex-col md:grid md:grid-cols-2">
+    <div className="flex-1 p-8 md:p-8 flex flex-col md:grid md:grid-cols-2 container mx-auto">
       <div className="">
-        <h1 className="text-3xl md:text-5xl font-bold">Empowering Students,</h1>
-        <h1 className="text-3xl md:text-5xl font-bold">Building Community </h1>
-        <h1 className="text-3xl md:text-5xl font-bold">Together</h1>
+        <h1 className="text-3xl md:text-5xl font-bold">Veyangoda Central College</h1>
+        <h1 className="text-3xl md:text-5xl font-bold"> Past Student Association </h1>
+        {/* <h1 className="text-3xl md:text-5xl font-bold">Together</h1> */}
       </div>
-      <div className=" flex flex-col justify-between h-full">
+      <div className=" flex flex-col justify-between">
         <div className="h-[50%] mb-8 md:mb-0 mt-5">
             <p className="text-gray-600">
                 Welcome to the Student Association, where your voice matters. 

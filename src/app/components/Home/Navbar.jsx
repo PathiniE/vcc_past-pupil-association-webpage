@@ -36,10 +36,10 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center gap-8">
-          <Image src="/assets/Logo-vcc.png" alt="Logo" height={100} width={100} />
-          <div className="flex flex-col text-sm font-medium text-gray-600">
-            <span className="block">Veyangoda Central College</span>
-            <span className="block">Past Student Association</span>
+          <Image src="/assets/Logo-vcc.png" alt="Logo" height={100} width={70} />
+          <div className="flex flex-col text-lg leading-5 font-bold text-primary">
+            <span className="block">VEYANGODA CENTRAL</span>
+            <span className="block">COLLEGE PAST STUDENT <br/> ASSOCIATION</span>
           </div>
         </Link>
 
@@ -71,13 +71,13 @@ export function Navbar() {
         {/* Desktop  */}
         <div className="hidden items-center space-x-4 lg:flex">
           <Link href="/reg">
-            <button className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white">Join</button>
+            <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm font-medium text-white">Join</button>
           </Link>
-          <Link href="/dashboard">
+          {/* <Link href="/dashboard">
             <button className="rounded-full bg-gray-100 p-2">
               <User className="h-5 w-5" />
             </button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Menu Button */}

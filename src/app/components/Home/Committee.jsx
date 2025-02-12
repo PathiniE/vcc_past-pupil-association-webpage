@@ -56,7 +56,7 @@ const COMMITTEE_MEMBERS = [
         </div>
   
         {/* Main content */}
-        <div className="flex flex-col lg:flex-row w-full">
+        <div className="flex flex-col lg:flex-row w-full container mx-auto ">
           {/* Desktop title section */}
           <div className="hidden lg:block lg:w-[30%] p-8 md:p-8">
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold">Committee</p>
