@@ -83,9 +83,9 @@ const News = () => {
   }, [])
 
   return (
-    <div className="p-4 md:p-6 lg:p-8 border-b-2">
+    <div className="p-8 md:p-8 lg:p-8 border-b-2  container mx-auto">
       <div className="text-center mb-8">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-3 sm:mt-0">Latest News & Updates</h1>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-3 sm:mt-0 text-primary">Latest News & Updates</h1>
         <p className="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         {/* View All button - mobile only */}
         <button

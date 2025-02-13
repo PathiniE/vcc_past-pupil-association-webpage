@@ -33,37 +33,43 @@ export function Navbar() {
 
   return (
     <header className="relative border-b">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between container">
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center gap-8">
-          <Image src="/assets/Logo-vcc.png" alt="Logo" height={100} width={100} />
-          <div className="flex flex-col text-sm font-medium text-gray-600">
-            <span className="block">Veyangoda Central College</span>
-            <span className="block">Past Student Association</span>
+          <Image src="/assets/Logo-vcc.png" alt="Logo" height={100} width={70} />
+          <div className="flex flex-col text-lg leading-5 font-bold text-primary">
+            <span className="block">VEYANGODA CENTRAL</span>
+            <span className="block">COLLEGE PAST STUDENT <br/> ASSOCIATION</span>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center space-x-8 lg:flex">
-          <Link href="/" className="text-sm font-medium text-gray-600 hover:text-gray-900">
+          <Link href="/" className="text-sm font-bold text-primary hover-underline-animation">
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-gray-900">
+          <Link href="/about" className="text-sm font-bold text-primary hover-underline-animation">
             About Us
           </Link>
-          <Link href="/donations" className="text-sm font-medium text-gray-600 hover:text-gray-900">
+          <Link href="/donations" className="text-sm font-bold text-primary hover-underline-animation">
             Donations
           </Link>
-          <Link href="/contact" className="text-sm font-medium text-gray-600 hover:text-gray-900">
+          <Link href="/contact" className="text-sm font-bold text-primary hover-underline-animation">
             Contact Us
           </Link>
           <div className="relative">
             <button
               onClick={() => setIsExploreOpen(!isExploreOpen)}
-              className="flex items-center space-x-1 text-sm font-medium text-gray-600 hover:text-gray-900"
+              className="flex items-center space-x-1 text-sm font-bold text-primary hover-underline-animation"
             >
-              <span>Explore</span>
-              <ChevronDown className="h-4 w-4" />
+              <div className="flex items-center">
+                <span>Explore</span>
+                <ChevronDown 
+                  className={`h-4 w-4 transition-transform duration-300 ml-1 ${
+                    isExploreOpen ? "-rotate-180" : ""
+                  }`} 
+                />
+            </div>
             </button>
           </div>
         </div>
@@ -71,13 +77,13 @@ export function Navbar() {
         {/* Desktop  */}
         <div className="hidden items-center space-x-4 lg:flex">
           <Link href="/reg">
-            <button className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white">Join</button>
+            <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-white hover:text-primary hover:border-2 hover:border-primary transition font-medium">Join</button>
           </Link>
-          <Link href="/dashboard">
+          {/* <Link href="/dashboard">
             <button className="rounded-full bg-gray-100 p-2">
               <User className="h-5 w-5" />
             </button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -119,7 +125,7 @@ export function Navbar() {
               <User />
               <span className="text-sm">John Doe</span>
             </div>
-            <Link href="/" className="text-lg font-medium text-gray-600 hover:text-gray-900">
+            <Link href="/" className="text-lg font-medium text-primary">
               Home
             </Link>
             <Link href="/about" className="text-lg font-medium text-gray-600 hover:text-gray-900">
@@ -171,4 +177,3 @@ export function Navbar() {
     </header>
   )
 }
-

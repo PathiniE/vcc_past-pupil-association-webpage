@@ -2,10 +2,10 @@
 
 export default function Journey() {
   return (
-    <div className="flex flex-col h-screen p-8 md:p-8 lg:p-12 border-b-2 border-gray-300">
+    <div className="flex flex-col h-screen p-8 md:p-8 lg:p-12 border-b-2 border-gray-300 container mx-auto">
         <div className=" flex flex-col md:flex-row md:h-[40%] gap-6 md:gap-8">
             <div className="w-full md:w-[50%]">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
                     Our Jounery <span className="block">Through Time</span>
                 </h2>
             </div>
