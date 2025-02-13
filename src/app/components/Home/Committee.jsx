@@ -48,10 +48,10 @@ const COMMITTEE_MEMBERS = [
   
   export default function Committee() {
     return (
-      <div className="flex flex-col lg:flex-row min-h-screen">
+      <div className="flex flex-col lg:flex-row min-h-screen container mx-auto">
         {/* Mobile title section */}
         <div className="block lg:hidden p-8">
-          <h1 className="text-2xl text-center font-bold">Executive Committee</h1>
+          <h1 className="text-2xl text-center font-bold text-primary">Executive Committee</h1>
           <p className=" text-gray-600 mt-2 text-center">Leading initiatives to enhance student engagement and representation</p>
         </div>
   
@@ -59,7 +59,7 @@ const COMMITTEE_MEMBERS = [
         <div className="flex flex-col lg:flex-row w-full">
           {/* Desktop title section */}
           <div className="hidden lg:block lg:w-[30%] p-8 md:p-8">
-            <p className="text-2xl md:text-3xl lg:text-4xl font-bold">Committee</p>
+            <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">Committee</p>
             <p className="text-gray-600 md:mt-4">Leading initiatives to enhance student engagement and representation</p>
           </div>
   
