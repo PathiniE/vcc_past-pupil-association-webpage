@@ -4,7 +4,9 @@ import Intro from "../components/Home/Intro";
 import Journey from "../components/Home/Journey";
 import { Navbar } from "../components/Home/Navbar";
 import News from "../components/Home/News";
+import Organizations from "../components/Home/Organizations";
 import President from "../components/Home/President";
+import Projects from "../components/Home/Projects";
 
 
 export default function Hero() {
@@ -17,6 +19,10 @@ export default function Hero() {
       <Journey />
       <News />
       <Committee />
+      <Projects />
+      <Organizations />
+      
+      
         
       </div>
     </div>

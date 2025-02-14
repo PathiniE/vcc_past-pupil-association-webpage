@@ -77,7 +77,7 @@ export function Navbar() {
         {/* Desktop  */}
         <div className="hidden items-center space-x-4 lg:flex">
           <Link href="/reg">
-            <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-white hover:text-primary hover:border-2 hover:border-primary transition font-medium">Join</button>
+            <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-primary/80 transition-colors  font-medium">Join</button>
           </Link>
           {/* <Link href="/dashboard">
             <button className="rounded-full bg-gray-100 p-2">

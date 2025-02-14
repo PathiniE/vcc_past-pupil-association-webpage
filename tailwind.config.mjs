@@ -11,7 +11,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'primary': '#006838',    // The green color for main headings
-        'secondary': '#FFD700',  // The yellow/gold color for secondary headings
+        'secondary': '#FFD700',  
       },
     },
   },

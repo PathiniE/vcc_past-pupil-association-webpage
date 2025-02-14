@@ -1,31 +1,31 @@
 const COMMITTEE_MEMBERS = [
-    {
-      id: 1,
-      name: 'Alice Johnson',
-      role: 'President',
-      description: 'Supporting the president and coordinating various student activities',
-      imageUrl: '/assets/bg.jpg'
-    },
+  {
+    id: 1,
+    name: 'Alice Johnson',
+    role: 'President',
+    description: 'Supporting the president and coordinating various student activities',
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1739178656557-16b949fea186?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlb3BsZSUyMGF2YXRhciUyMGNhcnRvb258ZW58MHx8MHx8fDA%3D'
+  },
     {
       id: 2,
       name: 'Alice Johnson',
       role: 'President',
       description: 'Supporting the president and coordinating various student activities',
-      imageUrl: '/assets/bg.jpg'
+      imageUrl: 'https://plus.unsplash.com/premium_photo-1738590561029-33c9c5d64af2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHBlb3BsZSUyMGF2YXRhciUyMGNhcnRvb258ZW58MHx8MHx8fDA%3D'
     },
     {
       id: 3,
       name: 'Alice Johnson',
       role: 'President',
       description: 'Supporting the president and coordinating various student activities',
-      imageUrl: '/assets/bg.jpg'
+      imageUrl: 'https://plus.unsplash.com/premium_photo-1738989235674-290022372c58?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fHBlb3BsZSUyMGF2YXRhciUyMGNhcnRvb258ZW58MHx8MHx8fDA%3D'
     },
     {
       id: 4,
       name: 'Alice Johnson',
       role: 'President',
       description: 'Supporting the president and coordinating various student activities',
-      imageUrl: '/assets/bg.jpg'
+      imageUrl: 'https://plus.unsplash.com/premium_photo-1738594383544-496c7cb479a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHBlb3BsZSUyMGF2YXRhciUyMGNhcnRvb258ZW58MHx8MHx8fDA%3D'
     }
   ];
   
@@ -48,7 +48,7 @@ const COMMITTEE_MEMBERS = [
   
   export default function Committee() {
     return (
-      <div className="flex flex-col lg:flex-row min-h-screen container mx-auto">
+      <div className="flex flex-col lg:flex-row p-8 md:p-8 lg:p-12 min-h-screen border-b-2 border-gray-300 container mx-auto">
         {/* Mobile title section */}
         <div className="block lg:hidden p-8">
           <h1 className="text-2xl text-center font-bold text-primary">Executive Committee</h1>
