@@ -58,7 +58,7 @@ export default function Organizations() {
 
   // Original desktop layout
   return (
-    <div className="flex flex-col md:flex-row gap-52 items-center h-60 mt-10 max-w-7xl border-b-2 border-gray-400 container mx-auto">
+    <div className="flex flex-col md:flex-row gap-52 items-center h-60 mt-10 max-w-7xl  container mx-auto">
       <div className="text-xl font-bold mb-2 md:mb-0 text-primary">
         Student Clubs & Organizations
       </div>
