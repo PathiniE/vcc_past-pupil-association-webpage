@@ -39,9 +39,9 @@ const COMMITTEE_MEMBERS = [
         />
       </div>
       <div className="space-y-1">
-        <h3 className="text-base font-medium">{name}</h3>
-        <p className="text-sm text-gray-600">{role}</p>
-        <p className="text-xs text-gray-500">{description}</p>
+        <h3 className="text-2xl font-medium">{name}</h3>
+        <p className="text-xl text-gray-600">{role}</p>
+        <p className="text-lg text-gray-500">{description}</p>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 const News = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -67,18 +68,19 @@ const News = () => {
   }, [])
 
   return (
-    <div className="p-8 md:p-8 lg:p-12 border-b-2 container mx-auto">
+    <div className="max-w-7xl mt-10 container mx-auto">
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-3 sm:mt-0 text-primary">Latest News & Updates</h1>
         <p className="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         {/* View All button - mobile only */}
+        <Link href='/news'>
         <button
-          className="md:hidden flex items-center justify-center mx-auto mt-4 px-6 py-2 bg-primary border  rounded-md hover:bg-primary/80 transition-colors"
-          onClick={() => setShowAllMobile(!showAllMobile)}
+          className="md:hidden flex items-center justify-center text-white mx-auto mt-4 px-6 py-2 bg-primary border  rounded-md hover:bg-primary/80 transition-colors"
         >
-          <span>{showAllMobile ? "Show Less" : "View All"}</span>
+          View All
           <ChevronRight className="w-4 h-4 ml-1" />
         </button>
+        </Link>
       </div>
 
       {/* Desktop Layout - Mixed Grid */}
@@ -108,6 +110,11 @@ const News = () => {
             </div>
           </div>
         </div>
+        <Link href='/news'>
+        <button className="flex items-center justify-center text-white mx-auto mt-10 px-6 py-2 bg-primary border  rounded-md hover:bg-primary/80 transition-colors">
+          View all
+        </button>
+        </Link>
       </div>
 
       {/* Mobile Layout - Horizontal Swipe */}
@@ -128,7 +135,7 @@ const News = () => {
           {(showAllMobile ? newsItems : newsItems.slice(0, 3)).map((_, index) => (
             <div
               key={index}
-              className={`h-2 w-2 rounded-full ${index === activeIndex ? "bg-blue-500" : "bg-gray-300"}`}
+              className={`h-2 w-2 rounded-full ${index === activeIndex ? "bg-primary" : "bg-gray-300"}`}
             />
           ))}
         </div>
@@ -138,7 +145,7 @@ const News = () => {
 }
 
 const NewsCard = ({ title, description, image, layout, type }) => (
-  <div className="h-full bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-sm transition-shadow">
+  <div className="h-full bg-white rounded-lg border-primary border-2 overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
     <div className="h-full flex">
       {layout === "right-content" && (
         <div className="w-1/2">

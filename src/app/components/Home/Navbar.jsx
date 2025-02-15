@@ -45,22 +45,22 @@ export function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center space-x-8 lg:flex">
-          <Link href="/" className="text-sm font-bold text-primary hover-underline-animation">
+          <Link href="/" className="text-sm font-semibold text-primary hover-underline-animation">
             Home
           </Link>
-          <Link href="/about" className="text-sm font-bold text-primary hover-underline-animation">
+          <Link href="/about" className="text-sm font-semibold text-primary hover-underline-animation">
             About Us
           </Link>
-          <Link href="/donations" className="text-sm font-bold text-primary hover-underline-animation">
+          <Link href="/donations" className="text-sm font-semibold text-primary hover-underline-animation">
             Donations
           </Link>
-          <Link href="/contact" className="text-sm font-bold text-primary hover-underline-animation">
+          <Link href="/contact" className="text-sm font-semibold text-primary hover-underline-animation">
             Contact Us
           </Link>
           <div className="relative">
             <button
               onClick={() => setIsExploreOpen(!isExploreOpen)}
-              className="flex items-center space-x-1 text-sm font-bold text-primary hover-underline-animation"
+              className="flex items-center space-x-1 text-sm font-semibold text-primary hover-underline-animation"
             >
               <div className="flex items-center">
                 <span>Explore</span>
@@ -98,16 +98,16 @@ export function Navbar() {
           <div className="mx-auto max-w-7xl px-4 py-6">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {exploreItems.map((item) => (
-                <Link key={item.title} href={item.href} className="block rounded-lg p-3 hover:bg-gray-50">
+                <Link key={item.title} href={item.href} className="block text-primary rounded-lg p-3 hover:bg-gray-100">
                   <div className="flex items-center space-x-3">
-                    <item.icon className=" h-5 w-5 text-gray-400" />
+                    <item.icon className=" h-5 w-5 text-primary" />
                     <div className="font-medium">{item.title}</div>
                   </div>
-                  <div className="mt-1 text-sm text-gray-500">{item.description}</div>
+                  <div className="mt-1 text-sm text-primary/65">{item.description}</div>
                 </Link>
               ))}
             </div>
-            <div className="mt-6 border-t pt-6 text-center text-sm gap-1 flex justify-center items-center">
+            <div className="mt-6 border-t pt-6 text-center text-sm gap-1 text-primary flex justify-center items-center">
               Looking for new opportunities?
               <Link href="/contact" className="font-medium hover:underline">
                 Contact Our Team
@@ -119,28 +119,28 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute left-0 top-full z-50 w-full border-b bg-white lg:hidden">
+        <div className="absolute left-0 top-full z-50 w-full border-b bg-primary lg:hidden">
           <div className="flex flex-col space-y-4 p-4">
             <div className="flex items-center justify-start gap-2 bg-slate-300 py-2">
               <User />
               <span className="text-sm">John Doe</span>
             </div>
-            <Link href="/" className="text-lg font-medium text-primary">
+            <Link href="/" className="text-lg font-medium text-white">
               Home
             </Link>
-            <Link href="/about" className="text-lg font-medium text-gray-600 hover:text-gray-900">
+            <Link href="/about" className="text-lg font-medium text-white hover:text-gray-900">
               About Us
             </Link>
-            <Link href="/donations" className="text-lg font-medium text-gray-600 hover:text-gray-900">
+            <Link href="/donations" className="text-lg font-medium text-white hover:text-gray-900">
               Donations
             </Link>
-            <Link href="/contact" className="text-lg font-medium text-gray-600 hover:text-gray-900">
+            <Link href="/contact" className="text-lg font-medium text-white hover:text-gray-900">
               Contact Us
             </Link>
             <div className="space-y-4">
               <button
                 onClick={() => setIsMobileExploreOpen(!isMobileExploreOpen)}
-                className="flex w-full items-center justify-between text-lg font-medium text-gray-600"
+                className="flex w-full items-center justify-between text-lg font-medium text-white"
               >
                 <span>Explore</span>
                 <ChevronDown
@@ -153,7 +153,7 @@ export function Navbar() {
                     <Link
                       key={item.title}
                       href={item.href}
-                      className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+                      className="flex items-center space-x-2 text-white hover:text-gray-900"
                     >
                       <item.icon className="h-5 w-5" />
                       <span>{item.title}</span>
@@ -162,9 +162,9 @@ export function Navbar() {
                 </div>
               )}
             </div>
-            <div className="mt-4 border-t pt-4 text-sm flex justify-start gap-1">
+            <div className="mt-4 border-t pt-4 text-sm flex justify-start gap-1 text-white">
               Looking for new opportunities?
-              <Link href="/contact" className="font-medium hover:underline">
+              <Link href="/contact" className="font-medium hover:underline text-white">
                 Contact Our Team
               </Link>
             </div>

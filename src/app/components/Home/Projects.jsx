@@ -61,7 +61,7 @@ export default function Projects() {
                 href={'/projects'}
                 className="text-primary hover:font-bold flex items-center text-sm gap-2"
               >
-                View Project<ChevronRightIcon className="h-4 w-4 hover:font-bold" />
+                View Project
               </Link>
             </div>
           </div>
