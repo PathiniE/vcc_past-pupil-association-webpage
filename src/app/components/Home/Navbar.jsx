@@ -121,10 +121,6 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute left-0 top-full z-50 w-full border-b bg-primary lg:hidden">
           <div className="flex flex-col space-y-4 p-4">
-            <div className="flex items-center justify-start gap-2 bg-slate-300 py-2">
-              <User />
-              <span className="text-sm">John Doe</span>
-            </div>
             <Link href="/" className="text-lg font-medium text-white">
               Home
             </Link>
