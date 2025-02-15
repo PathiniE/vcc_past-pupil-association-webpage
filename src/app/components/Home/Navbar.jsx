@@ -88,7 +88,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden">
-          {isMobileMenuOpen ? <X className="h-6 w-6 mr-2" /> : <Menu className="h-6 w-6 mr-2" />}
+          {isMobileMenuOpen ? <X className="h-6 w-6 mr-4" /> : <Menu className="h-6 w-6 mr-4" />}
         </button>
       </nav>
 

@@ -48,7 +48,7 @@ export default function Projects() {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4 ml-0 sm:ml-6">
-              <h3 className="text-xl font-bold text-primary">{project.name}</h3>
+              <h3 className="text-xl font-semibold text-primary">{project.name}</h3>
               <p className="text-gray-600 text-sm">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, index) => (
