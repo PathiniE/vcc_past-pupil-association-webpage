@@ -1,6 +1,7 @@
 import AboutIntro from "../components/About/AboutIntro";
 import WhoWeAre from "../components/About/WhoWeAre";
 import { Navbar } from "../components/Home/Navbar";
+import President from "../components/About/President";
 
 export default function Hero() {
     return (
@@ -9,6 +10,7 @@ export default function Hero() {
         <div >
         <AboutIntro />
         <WhoWeAre />
+        <President />
         
         
           
