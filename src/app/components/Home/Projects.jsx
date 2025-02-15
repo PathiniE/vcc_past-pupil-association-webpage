@@ -28,7 +28,7 @@ export default function Projects() {
   ]
 
   return (
-    <div className="w-full  max-w-7xl mt-10 pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-screen h-auto flex flex-col container mx-auto">
+    <div className="w-full  max-w-7xl pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-screen h-auto flex flex-col container mx-auto mt-20 sm:mt-32">
       <div className="mb-6">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary text-center sm:text-start">Our Featured Projects</h1>
         <p className="text-gray-600 mt-2 text-center sm:text-start">
@@ -44,7 +44,7 @@ export default function Projects() {
                 alt={project.name}
                 width={300}
                 height={200}
-                className="w-full h-[250px] object-cover rounded-md border-2 border-primary"
+                className="w-full h-[250px] object-cover rounded-md border-2 border-gray-200"
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4 ml-0 sm:ml-6">
@@ -52,7 +52,7 @@ export default function Projects() {
               <p className="text-gray-600 text-sm">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, index) => (
-                  <span key={index} className="px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded-full">
+                  <span key={index} className="px-3 py-1 text-xs bg-green-300/25 text-primary rounded-full">
                     {tag}
                   </span>
                 ))}

@@ -35,7 +35,7 @@ const COMMITTEE_MEMBERS = [
         <img 
           src={imageUrl} 
           alt={`${name} - ${role}`}
-          className="w-full aspect-square object-cover mb-4 rounded-md  border-primary border-2 transition-all hover:shadow-lg hover:-translate-y-1"
+          className="w-full aspect-square object-cover mb-4 rounded-md  border-gray-200 border-2 transition-all hover:shadow-lg hover:-translate-y-1"
         />
       </div>
       <div className="space-y-1">
@@ -48,7 +48,7 @@ const COMMITTEE_MEMBERS = [
   
   export default function Committee() {
     return (
-      <div className="flex flex-col lg:flex-row max-w-7xl mt-10 pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-screen container mx-auto">
+      <div className="flex flex-col lg:flex-row max-w-7xl  pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-screen container mx-auto mt-20 sm:mt-32">
         {/* Mobile title section */}
         <div className="block lg:hidden p-8">
           <h1 className="text-2xl text-center font-bold text-primary">Executive Committee</h1>

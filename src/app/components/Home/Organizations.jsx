@@ -34,8 +34,8 @@ export default function Organizations() {
 
   if (isMobile) {
     return (
-      <div className="flex flex-col items-center max-w-7xl border-b-2 border-gray-400 container mx-auto pb-6">
-        <div className="text-xl font-bold mb-4 text-primary text-center mt-10">
+      <div className="flex flex-col items-center max-w-7xl  container mx-auto pb-6 mt-20">
+        <div className="text-xl font-bold mb-4 text-primary text-center mt-12">
           Student Clubs & Organizations
         </div>
         <div className="w-full mt-2">
@@ -58,7 +58,7 @@ export default function Organizations() {
 
   // Original desktop layout
   return (
-    <div className="flex flex-col md:flex-row gap-52 items-center h-60 mt-10 max-w-7xl  container mx-auto">
+    <div className="flex flex-col md:flex-row gap-52 items-center h-60  max-w-7xl  container mx-auto mt-10">
       <div className="text-xl font-bold mb-2 md:mb-0 text-primary">
         Student Clubs & Organizations
       </div>

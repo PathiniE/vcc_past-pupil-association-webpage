@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export default function Intro() {
   return (
-    <div className=" w-full h-screen flex flex-col container mx-auto">
+    <div className=" w-screen h-screen flex flex-col">
     {/* Pathii Section with Background Image */}
     <div
-      className="relative bg-cover bg-center bg-no-repeat h-[60%] bg-slate-300 ">
+      className="relative w-full h-[60%]  ">
         <Image
           src='https://images.unsplash.com/photo-1570975640108-2292d83390ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fHVuaXZlcnNpdHklMjBhYXJjaGl0ZWN1dHJlfGVufDB8fDB8fHww'
           alt="bg image"
@@ -18,7 +18,7 @@ export default function Intro() {
     </div>
 
     {/* Intro Section */}
-    <div className="flex-1 flex flex-col md:grid md:grid-cols-2 max-w-7xl pl-8 pr-8 sm:pl-0 sm:pr-0 mt-3">
+    <div className="flex-1 flex flex-col md:grid md:grid-cols-2 max-w-7xl pl-8 pr-8 sm:pl-0 sm:pr-0 mt-4  mx-auto container">
       <div className="">
         <h1 className="text-3xl md:text-5xl font-bold text-primary">Empowering Students,</h1>
         <h1 className="text-3xl md:text-5xl font-bold text-primary">Building Community </h1>
@@ -40,7 +40,7 @@ export default function Intro() {
                 <button className="py-3 px-5 bg-primary text-white rounded-md hover:bg-primary/80">Join</button>
             </Link>
             <Link href="#">
-                <button className="py-3 px-5 bg-white border-2 border-primary text-primary shadow-lg rounded-md ">Learn More</button>
+                <button className="py-3 px-5 bg-white border-2 border-primary text-primary rounded-md ">Learn More</button>
             </Link>
         </div>
       </div>
