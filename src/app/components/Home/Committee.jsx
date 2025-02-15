@@ -35,20 +35,20 @@ const COMMITTEE_MEMBERS = [
         <img 
           src={imageUrl} 
           alt={`${name} - ${role}`}
-          className="w-full aspect-square object-cover mb-4"
+          className="w-full aspect-square object-cover mb-4 rounded-md  border-primary border-2 transition-all hover:shadow-lg hover:-translate-y-1"
         />
       </div>
       <div className="space-y-1">
-        <h3 className="text-2xl font-medium">{name}</h3>
-        <p className="text-xl text-gray-600">{role}</p>
-        <p className="text-lg text-gray-500">{description}</p>
+        <h3 className="text-xl text-primary font-semibold">{name}</h3>
+        <p className="text-lg text-gray-600">{role}</p>
+        <p className=" text-gray-500">{description}</p>
       </div>
     </div>
   );
   
   export default function Committee() {
     return (
-      <div className="flex flex-col lg:flex-row p-8 md:p-8 lg:p-12 min-h-screen border-b-2 border-gray-300 container mx-auto">
+      <div className="flex flex-col lg:flex-row max-w-7xl mt-10 pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-screen container mx-auto">
         {/* Mobile title section */}
         <div className="block lg:hidden p-8">
           <h1 className="text-2xl text-center font-bold text-primary">Executive Committee</h1>
@@ -58,13 +58,13 @@ const COMMITTEE_MEMBERS = [
         {/* Main content */}
         <div className="flex flex-col lg:flex-row w-full">
           {/* Desktop title section */}
-          <div className="hidden lg:block lg:w-[30%] p-8 md:p-8">
+          <div className="hidden lg:block lg:w-[40%]">
             <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">Committee</p>
-            <p className="text-gray-600 md:mt-4">Leading initiatives to enhance student engagement and representation</p>
+            <p className="text-gray-600 mt-2">Leading initiatives to enhance student engagement and representation</p>
           </div>
   
           {/* Grid section */}
-          <div className="w-full lg:w-[70%] p-8 md:p-8 lg:mt-0">
+          <div className="w-full lg:w-[60%] p-8 md:p-8 lg:mt-0">
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 md:gap-6">
               {COMMITTEE_MEMBERS.map((member) => (
                 <CommitteeMemberCard

@@ -170,11 +170,11 @@ const NewsCard = ({ title, description, image, layout, type }) => (
 )
 
 const MobileNewsCard = ({ title, description, image }) => (
-  <div className="w-full bg-white rounded-lg overflow-hidden flex flex-col h-full">
-    <div className="aspect-[16/9] w-full">
+  <div className="w-full bg-white h-[400px] rounded-lg overflow-hidden flex flex-col">
+    <div className="h-[200px] w-full">
       <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover bg-gray-100" />
     </div>
-    <div className="p-4 text-center">
+    <div className="p-4 flex-1 text-center flex flex-col justify-between">
       <p className="text-xs text-gray-600 mb-2">TagLine</p>
       <h2 className="text-xl font-bold mb-2 line-clamp-2">{title}</h2>
       <p className="text-sm text-gray-600 mb-3 line-clamp-2">{description}</p>
