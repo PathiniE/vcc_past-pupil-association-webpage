@@ -38,8 +38,8 @@ export function Navbar() {
         <Link href="/" className="flex items-center justify-center gap-8">
           <Image src="/assets/Logo-vcc.png" alt="Logo" height={100} width={70} />
           <div className="flex flex-col text-lg leading-5 font-bold text-primary">
-            <span className="block">VEYANGODA CENTRAL</span>
-            <span className="block">COLLEGE PAST STUDENT <br/> ASSOCIATION</span>
+            <span className="block text-xs sm:text-base">VEYANGODA CENTRAL</span>
+            <span className="block text-xs sm:text-base">COLLEGE PAST STUDENT <br/> ASSOCIATION</span>
           </div>
         </Link>
 
@@ -88,7 +88,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden">
-          {isMobileMenuOpen ? <X className="h-6 w-6 mr-4" /> : <Menu className="h-6 w-6 mr-4" />}
+          {isMobileMenuOpen ? <X className="h-6 w-6 mr-4 text-primary" /> : <Menu className="h-6 w-6 mr-4 text-primary" />}
         </button>
       </nav>
 

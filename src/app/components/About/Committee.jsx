@@ -39,7 +39,7 @@ export default function ExecutiveCommittee() {
       {/* Mobile view (grid of equal cards) */}
       <div className="grid grid-cols-2 gap-4 md:hidden">
         {memberData.map((member, index) => (
-          <div key={index} className=" rounded-lg overflow-hidden flex flex-col">
+          <div key={index} className="rounded-lg overflow-hidden flex flex-col">
             <div className="h-32 relative">
               <Image
                 src={member.image}
@@ -52,6 +52,7 @@ export default function ExecutiveCommittee() {
             <div className="p-3 text-center">
               <h3 className="font-bold text-sm">{member.name}</h3>
               <p className="text-gray-600 text-xs">{member.title}</p>
+              {/* Description removed from mobile view */}
             </div>
           </div>
         ))}
