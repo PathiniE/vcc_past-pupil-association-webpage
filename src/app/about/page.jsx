@@ -8,7 +8,7 @@ import Committee from "../components/About/Committee";
 export default function Hero() {
     return (
       <div className="flex flex-col min-h-screen">
-        <Navbar />
+        
         <div >
         <AboutIntro />
         <WhoWeAre />

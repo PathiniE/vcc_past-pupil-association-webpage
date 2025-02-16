@@ -12,15 +12,18 @@ import Projects from "@/app/components/Home/Projects";
 export default function Hero() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <div >
+      
+      <div className="" >
       <Intro />
+      <div className="gap-8">
       <President />
       <Journey />
       <News />
       <Committee />
       <Projects />
       <Organizations />
+      </div>
+      
       
       
         
