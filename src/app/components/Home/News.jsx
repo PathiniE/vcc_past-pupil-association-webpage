@@ -144,30 +144,71 @@ const News = () => {
   )
 }
 
-const NewsCard = ({ title, description, image, layout, type }) => (
-  <div className="h-full bg-white rounded-lg border-gray-200 border-2 overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
-    <div className="h-full flex">
-      {layout === "right-content" && (
-        <div className="w-1/2">
-          <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+const NewsCard = ({ title, description, image, layout, type }) => {
+  if (layout === "right-content" && type === "large") {
+    return (
+      <div className="h-full bg-white rounded-lg border-gray-200 border-2 overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+        <div className="h-full flex flex-col">
+          <div className="w-full h-1/2">
+            <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+          </div>
+          <div className="w-full h-1/2 p-5 flex flex-col justify-center">
+            <p className="text-sm font-medium mb-2 text-primary/80">TagLine</p>
+            <h2 className="text-2xl font-bold mb-1 text-primary">{title}</h2>
+            <p className="text-gray-600 mb-2">{description}</p>
+            <button className="flex items-center text-xs text-primary">
+              View <ChevronRight className="w-3 h-3 ml-1 text-primary/80" />
+            </button>
+          </div>
         </div>
-      )}
-      <div className="w-1/2 p-5 flex flex-col justify-center">
-        <p className="text-xs text-gray-600 mb-1">TagLine</p>
-        <h2 className="text-2xl font-bold mb-1">{title}</h2>
-        <p className="text-lg text-gray-600 mb-2">{description}</p>
-        <button className="flex items-center text-xs">
-          Button <ChevronRight className="w-3 h-3 ml-1" />
-        </button>
       </div>
-      {layout === "left-content" && (
-        <div className="w-1/2">
-          <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+    );
+  } else if (layout === "left-content" && type === "large") {
+    return (
+      <div className="h-full bg-white rounded-lg border-gray-200 border-2 overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+        <div className="h-full flex flex-col">
+          <div className="w-full h-1/2 p-5 flex flex-col justify-center">
+            <p className="text-sm font-medium mb-2 text-primary/80">TagLine</p>
+            <h2 className="text-2xl font-bold mb-1 text-primary">{title}</h2>
+            <p className="text-gray-600 mb-2">{description}</p>
+            <button className="flex items-center text-xs text-primary">
+              View <ChevronRight className="w-3 h-3 ml-1 text-primary/80" />
+            </button>
+          </div>
+          <div className="w-full h-1/2">
+            <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+          </div>
         </div>
-      )}
-    </div>
-  </div>
-)
+      </div>
+    );
+  } else {
+    // Original layout for small types
+    return (
+      <div className="h-full bg-white rounded-lg border-gray-200 border-2 overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+        <div className="h-full flex">
+          {layout === "right-content" && (
+            <div className="w-1/2">
+              <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+            </div>
+          )}
+          <div className="w-1/2 p-5 flex flex-col justify-center">
+            <p className="text-sm font-medium mb-2 text-primary/80">TagLine</p>
+            <h2 className="text-2xl font-bold mb-1 text-primary">{title}</h2>
+            <p className="text-gray-600 mb-2">{description}</p>
+            <button className="flex items-center text-xs text-primary">
+              View <ChevronRight className="w-3 h-3 ml-1 text-primary/80" />
+            </button>
+          </div>
+          {layout === "left-content" && (
+            <div className="w-1/2">
+              <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+};
 
 const MobileNewsCard = ({ title, description, image }) => (
   <div className="w-full bg-white h-[400px] rounded-lg overflow-hidden flex flex-col">
