@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ContactIntro() {
   return (
-    <div className="flex flex-col items-center justify-center text-center pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-[450px] max-w-7xl mx-auto bg-red-300">
+    <div className="flex flex-col items-center justify-center text-center pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-[450px] max-w-7xl mx-auto">
       <p className="text-sm font-medium mb-2 text-primary/80 ">Contact Us</p>
       
       <h1 className="text-3xl md:text-5xl font-bold text-primary mb-1 mt-4">

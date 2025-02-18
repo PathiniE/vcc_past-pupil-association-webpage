@@ -1,5 +1,6 @@
 import ContactIntro from "../components/Contact Us/ContactIntro"
 import Inquiry from "../components/Contact Us/Inquiry";
+import Map from "../components/Contact Us/Map";
 
 export default function Page() {
     return (
@@ -8,7 +9,7 @@ export default function Page() {
     
        <ContactIntro />
        <Inquiry />
-        
+      <Map />
         
           
         

@@ -17,10 +17,10 @@ export default function Inquiry() {
     <div className="flex flex-col md:flex-row max-w-7xl h-[80vh] px-8 sm:px-0 container mx-auto">
       <div className="w-full md:w-[40%] mb-8 md:mb-0">
         <p className="text-sm font-medium mb-2 text-primary/80">Inquiry</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-primary mb-1 mt-4">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-1 mt-4">
           Get in Touch
         </h1>
-        <p className="text-gray-600 mt-4">
+        <p className="text-gray-600">
           We'd love to hear from you!
         </p>
         <div className="md:hidden mt-4 text-gray-600">
@@ -40,7 +40,7 @@ export default function Inquiry() {
 
       </div>
       <div className="w-full md:w-[60%] bg-slate-500 flex-grow">
-        <form className="bg-white  p-8 space-y-6 h-full">
+        <form className="bg-white md:p-8 space-y-6 h-full">
           <div>
             <label className="block text-sm font-medium text-gray-700">Name</label>
             <Input type="text" className="mt-1 block w-full" placeholder="" />
