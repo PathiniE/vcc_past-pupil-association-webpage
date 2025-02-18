@@ -1,6 +1,7 @@
+
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { ChevronDown, Menu, X, User, Newspaper, Briefcase, ImageIcon } from "lucide-react"
 import Image from "next/image"
@@ -30,6 +31,29 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isExploreOpen, setIsExploreOpen] = useState(false)
   const [isMobileExploreOpen, setIsMobileExploreOpen] = useState(false)
+
+  const mobileMenuRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
 
   return (
     <header className="relative border-b">
@@ -69,7 +93,7 @@ export function Navbar() {
                     isExploreOpen ? "-rotate-180" : ""
                   }`} 
                 />
-            </div>
+              </div>
             </button>
           </div>
         </div>
@@ -77,13 +101,8 @@ export function Navbar() {
         {/* Desktop  */}
         <div className="hidden items-center space-x-4 lg:flex">
           <Link href="/reg">
-            <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-primary/80 transition-colors  font-medium">Join</button>
+            <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-primary/80 transition-colors font-medium">Join</button>
           </Link>
-          {/* <Link href="/dashboard">
-            <button className="rounded-full bg-gray-100 p-2">
-              <User className="h-5 w-5" />
-            </button>
-          </Link> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -119,7 +138,10 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute left-0 top-full z-50 w-full border-b bg-primary lg:hidden">
+        <div
+          ref={mobileMenuRef}
+          className="absolute left-0 top-full z-50 w-full border-b bg-primary lg:hidden"
+        >
           <div className="flex flex-col space-y-4 p-4">
             <Link href="/" className="text-lg font-medium text-white">
               Home
@@ -172,4 +194,4 @@ export function Navbar() {
       )}
     </header>
   )
-} 
+}
