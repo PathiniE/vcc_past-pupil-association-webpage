@@ -7,9 +7,9 @@ import Committee from "../components/About/Committee";
 
 export default function Hero() {
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen gap-20">
         
-        <div >
+        
         <AboutIntro />
         <WhoWeAre />
         <President />
@@ -18,7 +18,7 @@ export default function Hero() {
         
         
           
-        </div>
+        
       </div>
     );
   }

@@ -48,7 +48,7 @@ const CommitteeMemberCard = ({ name, role, description, imageUrl }) => (
 
 export default function Committee() {
   return (
-    <div className="flex flex-col lg:flex-row max-w-7xl pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-screen container mx-auto mt-20 sm:mt-32">
+    <div className="flex flex-col lg:flex-row max-w-7xl pl-8 pr-8 sm:pl-0 sm:pr-0 min-h-screen container mx-auto">
       {/* Mobile title section */}
       <div className="block lg:hidden p-8">
         <h1 className="text-2xl text-center font-bold text-primary">Executive Committee</h1>

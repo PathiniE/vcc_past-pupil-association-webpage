@@ -2,7 +2,7 @@
 
 export default function Journey() {
   return (
-    <div className="flex flex-col h-screen max-w-7xl mt-20 sm:mt-32  pl-8 pr-8 sm:pl-0 sm:pr-0 container mx-auto">
+    <div className="flex flex-col h-screen max-w-7xl pl-8 pr-8 sm:pl-0 sm:pr-0 container mx-auto">
         <div className=" flex flex-col md:flex-row md:h-[30%] lg:h-[20%]">
             <div className="w-full md:w-[30%]">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
-    <div className="flex flex-col max-w-7xl h-screen mt-10 md:mt-20 pl-8 pr-8 sm:pl-0 sm:pr-0 container mx-auto">
+    <div className="flex flex-col max-w-7xl h-screen  pl-8 pr-8 sm:pl-0 sm:pr-0 container mx-auto">
       <p className="md:mb-4 text-sm font-medium mb-2 text-primary/80">Who we are</p>
 
       <div className="flex flex-col md:flex-row md:gap-8 lg:gap-16">
