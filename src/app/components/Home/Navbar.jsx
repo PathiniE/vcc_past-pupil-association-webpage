@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { ChevronDown, Menu, X, User, Newspaper, Briefcase, ImageIcon } from "lucide-react"
 import Image from "next/image"
@@ -30,6 +30,26 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isExploreOpen, setIsExploreOpen] = useState(false)
   const [isMobileExploreOpen, setIsMobileExploreOpen] = useState(false)
+  
+  const menuRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
 
   return (
     <header className="relative border-b">
@@ -74,16 +94,11 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Desktop  */}
+        {/* Desktop */}
         <div className="hidden items-center space-x-4 lg:flex">
           <Link href="/reg">
             <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-primary/80 transition-colors  font-medium">Join</button>
           </Link>
-          {/* <Link href="/dashboard">
-            <button className="rounded-full bg-gray-100 p-2">
-              <User className="h-5 w-5" />
-            </button>
-          </Link> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,34 +107,9 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Full-width Explore Dropdown (Desktop) */}
-      {isExploreOpen && (
-        <div className="absolute left-0 top-full z-50 hidden w-full border-b bg-white shadow-lg lg:block">
-          <div className="mx-auto max-w-7xl px-4 py-6">
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {exploreItems.map((item) => (
-                <Link key={item.title} href={item.href} className="block text-primary rounded-lg p-3 hover:bg-gray-100">
-                  <div className="flex items-center space-x-3">
-                    <item.icon className=" h-5 w-5 text-primary" />
-                    <div className="font-medium">{item.title}</div>
-                  </div>
-                  <div className="mt-1 text-sm text-primary/65">{item.description}</div>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-6 border-t pt-6 text-center text-sm gap-1 text-primary flex justify-center items-center">
-              Looking for new opportunities?
-              <Link href="/contact" className="font-medium hover:underline">
-                Contact Our Team
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute left-0 top-full z-50 w-full border-b bg-primary lg:hidden">
+        <div ref={menuRef} className="absolute left-0 top-full z-50 w-full border-b bg-primary lg:hidden">
           <div className="flex flex-col space-y-4 p-4">
             <Link href="/" className="text-lg font-medium text-white">
               Home

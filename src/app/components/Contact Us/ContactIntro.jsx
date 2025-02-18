@@ -11,7 +11,7 @@ export default function ContactIntro() {
       
       <div className="max-w-xs sm:max-w-sm md:max-w-2xl mx-auto mb-6 mt-4 ">
         <p className="text-gray-600">
-          We are here to help you with any questions or concerns tou may have
+          We are here to help you with any questions or concerns you may have
         </p>
       </div>
       <div className=" w-full flex justify-center space-x-8">
