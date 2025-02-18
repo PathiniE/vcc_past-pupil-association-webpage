@@ -1,10 +1,9 @@
-
 "use client"
 
-
+import React from "react"
 import Image from "next/image"
 
-const Committee = () => {
+const ExecutiveCommittee = () => {
   const committeeMembers = [
     {
       id: 1,
@@ -37,19 +36,21 @@ const Committee = () => {
   ]
 
   return (
-    <div className="max-w-7xl container mx-auto min-h-screen pl-8 pr-8 sm:pl-0 sm:pr-0">
+    <div className="max-w-7xl container mx-auto min-h-screen py-8 px-4">
       {/* Header */}
       <div className="mb-8 text-center md:text-left">
-        <h4 className="md:mb-4 text-sm font-medium mb-2 text-primary/80">Committee</h4>
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">Executive Committee</h1>
-        <p className="text-gray-600 mt-2">Leading initiatives to enhance student engagement and representation.</p>
+        <p className="text-sm font-medium mb-2 text-primary/80">Committee</p>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mt-1 mb-4">Executive Committee</h1>
+        <p className="text-gray-600">Leading initiatives to enhance student engagement and representation.</p>
       </div>
 
       {/* Desktop Layout - Hidden on Mobile */}
       <div className="hidden md:flex md:flex-row md:gap-4 md:h-[calc(100vh-200px)]">
         {/* Large Cell */}
         <div className="w-2/3 rounded-lg overflow-hidden relative group">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
+          {/* Multiple gradient layers for enhanced effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/30 to-primary/50 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/30 to-black/50 z-10" />
           <div className="absolute bottom-0 left-0 p-6 z-20 text-white">
             <h2 className="text-xl font-semibold">{committeeMembers[0].name}</h2>
             <p className="text-sm text-white/80 mt-1">{committeeMembers[0].title}</p>
@@ -71,7 +72,7 @@ const Committee = () => {
         <div className="w-1/3 flex flex-col gap-4">
           {committeeMembers.slice(1, 4).map((member, index) => (
             <div key={member.id} className="h-1/3 rounded-lg overflow-hidden relative group">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/50 to-transparent z-10" />
               <div className="absolute bottom-0 left-0 p-4 z-20 text-white">
                 <h2 className="text-lg font-semibold">{member.name}</h2>
                 <p className="text-xs text-white/80 mt-0.5">{member.title}</p>
@@ -88,7 +89,7 @@ const Committee = () => {
                   />
                 </div>
               </div>
-              <div className="absolute top-0 left-0 w-2 h-full" />
+              <div className="absolute top-0 left-0 w-2 h-full " />
             </div>
           ))}
         </div>
@@ -116,4 +117,4 @@ const Committee = () => {
   )
 }
 
-export default Committee
+export default ExecutiveCommittee
