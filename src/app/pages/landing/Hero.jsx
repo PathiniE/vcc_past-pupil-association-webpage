@@ -1,4 +1,5 @@
 
+import Footer from "@/app/components/Footer";
 import Committee from "@/app/components/Home/Committee";
 import Intro from "@/app/components/Home/Intro";
 import Journey from "@/app/components/Home/Journey";
@@ -22,6 +23,7 @@ export default function Hero() {
       <Committee />
       <Projects />
       <Organizations />
+      
       
     </div>
   );

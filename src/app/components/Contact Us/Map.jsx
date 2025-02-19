@@ -9,13 +9,13 @@ const contactInfo = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen mx-auto container px-8 sm:px-0">
+    <div className="mx-auto container px-8 sm:px-0">
       <div className="max-w-7xl mx-auto space-y-8">
        
         <div className="grid md:grid-cols-2 md:gap-16 lg:gap-24">
           
           <div className="space-y-4">
-          <p className="text-sm font-medium mb-2 text-primary/80">Inquiry</p>
+            <p className="text-sm font-medium mb-2 text-primary/80">Inquiry</p>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">Contact us</h1>
             <p className="text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -24,7 +24,7 @@ export default function ContactPage() {
           </div>
 
          
-          <div className="space-y-6  mt-6 md:mt-0">
+          <div className="space-y-6 mt-6 md:mt-0">
             <div className="flex items-start gap-3">
               <Mail className="h-5 w-5 text-primary mt-0.5" />
               <div>
@@ -53,7 +53,6 @@ export default function ContactPage() {
 
         {/* Map Section */}
         <div className="w-full h-[400px] md:h-[500px] bg-muted rounded-lg overflow-hidden">
-          
           <div className="w-full h-full flex items-center justify-center">
             <MapPin className="h-12 w-12 text-muted-foreground opacity-50" />
           </div>
@@ -62,4 +61,3 @@ export default function ContactPage() {
     </div>
   )
 }
-

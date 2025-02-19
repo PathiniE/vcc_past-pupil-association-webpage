@@ -36,7 +36,7 @@ const ExecutiveCommittee = () => {
   ]
 
   return (
-    <div className="max-w-7xl container mx-auto min-h-screen py-8 px-4">
+    <div className="max-w-7xl container mx-auto h-auto py-8 px-4">
       {/* Header */}
       <div className="mb-8 text-center md:text-left">
         <p className="text-sm font-medium mb-2 text-primary/80">Committee</p>
