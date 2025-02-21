@@ -30,13 +30,13 @@ export default function Footer() {
                 <Link href="/" className="block hover:text-primary/80 font-semibold text-primary">
                   Home
                 </Link>
-                <Link href="/about-us" className="block hover:text-primary/80 text-primary font-semibold">
+                <Link href="/about" className="block hover:text-primary/80 text-primary font-semibold">
                   About Us
                 </Link>
                 <Link href="/donations" className="block hover:text-primary/80 text-primary font-semibold">
                   Donations
                 </Link>
-                <Link href="/contact-us" className="block hover:text-primary/80 text-primary font-semibold">
+                <Link href="/contact" className="block hover:text-primary/80 text-primary font-semibold">
                   Contact Us
                 </Link>
               </div>
@@ -77,9 +77,9 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="space-y-4 pt-4">
             <Link href="/" className="block hover:text-primary/80 text-primary">Home</Link>
-            <Link href="/about-us" className="block hover:text-primary/80 text-primary">About Us</Link>
+            <Link href="/about" className="block hover:text-primary/80 text-primary">About Us</Link>
             <Link href="/donations" className="block hover:text-primary/80 text-primary">Donations</Link>
-            <Link href="/contact-us" className="block hover:text-primary/80 text-primary">Contact Us</Link>
+            <Link href="/contact" className="block hover:text-primary/80 text-primary">Contact Us</Link>
             <Link href="/projects" className="block hover:text-primary/80 text-primary">Projects</Link>
             <Link href="/gallery" className="block hover:text-primary/80 text-primary">Gallery</Link>
             <Link href="/news-events" className="block hover:text-primary/80 text-primary">News & Events</Link>
