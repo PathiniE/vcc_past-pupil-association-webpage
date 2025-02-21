@@ -26,11 +26,11 @@ export default function Inquiry() {
             <Mail className="mr-4 h-5 w-5" />
             {contactInfo.email}
           </p>
-          <p className="flex items-center">
+          <p className="flex items-center mt-4 md:mt-0">
             <Phone className="mr-4 h-5 w-5" />
             {contactInfo.phone}
           </p>
-          <p className="flex items-center">
+          <p className="flex items-center mt-4 md:mt-0">
             <MapPin className="mr-4 h-5 w-5" />
             {contactInfo.address}
           </p>

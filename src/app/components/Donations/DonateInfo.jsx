@@ -74,7 +74,7 @@ const DonateInfo = () => {
 
         {/* Right Column - Form */}
         <div className="w-full lg:w-1/2">
-          <form className="space-y-6 bg-white  p-8">
+          <form className="space-y-6  md:p-8">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Name
@@ -113,7 +113,7 @@ const DonateInfo = () => {
                 Receipt
               </label>
               <div 
-                className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-gray-400 transition-colors"
+                className="border-2  border-gray-300 rounded-lg p-6 text-center cursor-pointer"
                 onClick={handleUploadClick}
               >
                 <input
