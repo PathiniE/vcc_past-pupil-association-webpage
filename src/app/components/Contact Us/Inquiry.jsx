@@ -51,10 +51,7 @@ export default function Inquiry() {
             <label className="block text-sm font-medium text-gray-700">Message</label>
             <Textarea className="mt-1 block w-full" placeholder="Write your message..." rows="4" />
           </div>
-          <div className="flex items-start">
-            <Checkbox className="h-4 w-4 text-primary border-gray-300 rounded" />
-            <label className="ml-2 text-sm text-gray-600">I agree to Terms</label>
-          </div>
+          
           <Button type="submit" className="text-white">Submit</Button>
         </form>
       </div>
