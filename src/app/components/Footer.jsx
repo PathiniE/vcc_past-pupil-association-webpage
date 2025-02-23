@@ -50,7 +50,7 @@ export default function Footer() {
                 <Link href="/news-events" className="block hover:text-primary/80 text-primary font-semibold">
                   News & Events
                 </Link>
-                <Link href="/join-us" className="block hover:text-primary/80 text-primary font-semibold">
+                <Link href="/registration" className="block hover:text-primary/80 text-primary font-semibold">
                   Join Us
                 </Link>
               </div>
@@ -83,7 +83,7 @@ export default function Footer() {
             <Link href="/projects" className="block hover:text-primary/80 text-primary">Projects</Link>
             <Link href="/gallery" className="block hover:text-primary/80 text-primary">Gallery</Link>
             <Link href="/news-events" className="block hover:text-primary/80 text-primary">News & Events</Link>
-            <Link href="/join-us" className="block hover:text-primary/80 text-primary">Join Us</Link>
+            <Link href="/registration" className="block hover:text-primary/80 text-primary">Join Us</Link>
           </div>
 
           {/* Social Icons */}
@@ -107,7 +107,7 @@ export default function Footer() {
 
           {/* Join Button */}
           <div className="pt-4">
-            <Link href="/register" className="block w-full py-2   text-white text-center rounded hover:bg-primary/80 bg-primary">
+            <Link href="/registration" className="block w-full py-2   text-white text-center rounded hover:bg-primary/80 bg-primary">
               Join
             </Link>
           </div>
@@ -133,7 +133,7 @@ export default function Footer() {
                 <Youtube className="w-5 h-5" />
               </Link>
             </div>
-            <Link href="/register" className="px-12 py-2 bg-primary text-white rounded hover:bg-primary/80">
+            <Link href="/registration" className="px-12 py-2 bg-primary text-white rounded hover:bg-primary/80">
               Join
             </Link>
           </div>

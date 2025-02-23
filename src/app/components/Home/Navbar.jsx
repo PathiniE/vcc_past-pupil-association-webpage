@@ -98,7 +98,7 @@ export function Navbar() {
               </div>
             </button>
           </div>
-          <Link href="/reg">
+          <Link href="/registration">
             <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-primary/80 transition-colors font-medium">Join</button>
           </Link>
         </div>
@@ -184,7 +184,7 @@ export function Navbar() {
                 Contact Our Team
               </Link>
             </div>
-            <Link href="/register">
+            <Link href="/registration">
               <button className="w-full rounded-md bg-black px-4 py-2 text-sm font-medium text-white">Join</button>
             </Link>
           </div>
