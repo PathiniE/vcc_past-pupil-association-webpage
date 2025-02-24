@@ -16,7 +16,7 @@ export default function Membership() {
   
 
   return (
-    <div className="max-w-7xl mx-auto h-screen container flex flex-col md:flex-row px-8 md:px-0 mt-10 ">
+    <div className="max-w-7xl mx-auto container flex flex-col md:flex-row px-8 md:px-0 mt-10 ">
      
      <div className="hidden md:block md:w-[50%]">
         <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-primary/80">

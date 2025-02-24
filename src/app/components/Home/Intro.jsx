@@ -83,7 +83,7 @@ export default function Intro() {
             </p>
           </div>
           <div className="flex gap-6 md:mt-6">
-            <Link href="/register">
+            <Link href="/registration">
               <button className="py-3 px-5 bg-primary text-white rounded-md hover:bg-primary/80">Join</button>
             </Link>
             <Link href="#">
