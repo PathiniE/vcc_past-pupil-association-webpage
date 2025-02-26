@@ -4,7 +4,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import Link from "next/link"
+import {Link } from 'next-view-transitions'
 import { ChevronDown, Menu, X, Newspaper, Briefcase, ImageIcon } from "lucide-react"
 import Image from "next/image"
 

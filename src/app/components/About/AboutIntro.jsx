@@ -1,4 +1,4 @@
-import Link from "next/link";
+import {Link} from  "next-view-transitions";
 
 export default function AboutIntro() {
   return (
@@ -19,7 +19,7 @@ export default function AboutIntro() {
         </p>
       </div>
       
-      <Link href="/reg">
+      <Link href="/registration">
             <button className="rounded-md bg-primary w-28 px-4 py-2 text-sm text-white shadow hover:bg-primary/80 transition-colors  font-medium">Join</button>
           </Link>
     </div>

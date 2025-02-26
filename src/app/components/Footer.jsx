@@ -1,7 +1,7 @@
 
 
 
-import Link from "next/link";
+import {Link } from 'next-view-transitions';
 import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 

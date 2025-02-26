@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { ChevronRight } from "lucide-react"
-import Link from "next/link"
+import {Link } from 'next-view-transitions';
 
 const News = () => {
   const [activeIndex, setActiveIndex] = useState(0)
