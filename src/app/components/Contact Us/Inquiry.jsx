@@ -30,19 +30,19 @@ export default function Inquiry() {
     
     try {
       const response = await emailjs.send(
-        "service_7qegyor", // Replace with your EmailJS Service ID
-        "template_ehrvkqd", // Replace with your EmailJS Template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Replace with your EmailJS Service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "tzcn18BppOD_i0aK3" // Replace with your EmailJS Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY // Replace with your EmailJS Public Key
       );
 
       console.log("Email sent successfully:", response);
       alert("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" }); // Reset form
+      setFormData({ name: "", email: "", message: "" }); 
     } catch (error) {
       console.error("Error sending email:", error);
       alert("Failed to send message. Please try again.");
