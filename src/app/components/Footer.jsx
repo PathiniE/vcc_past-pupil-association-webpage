@@ -53,7 +53,7 @@ export default function Footer() {
               <Link href="/gallery" className="block hover:text-primary/80 text-primary font-semibold">
                 Gallery
               </Link>
-              <Link href="/news-events" className="block hover:text-primary/80 text-primary font-semibold">
+              <Link href="/news" className="block hover:text-primary/80 text-primary font-semibold">
                 News & Events
               </Link>
               <Link href="/registration" className="block hover:text-primary/80 text-primary font-semibold">
@@ -82,7 +82,7 @@ export default function Footer() {
             <Link href="/contact" className="block hover:text-primary/80 text-primary">Contact Us</Link>
             <Link href="/projects" className="block hover:text-primary/80 text-primary">Projects</Link>
             <Link href="/gallery" className="block hover:text-primary/80 text-primary">Gallery</Link>
-            <Link href="/news-events" className="block hover:text-primary/80 text-primary">News & Events</Link>
+            <Link href="/news" className="block hover:text-primary/80 text-primary">News & Events</Link>
             <Link href="/registration" className="block hover:text-primary/80 text-primary">Join Us</Link>
           </div>
 
