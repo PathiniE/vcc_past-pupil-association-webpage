@@ -1,6 +1,6 @@
 import {Link } from 'next-view-transitions'
 import Image from "next/image"
-import { ChevronDown, ChevronRightIcon } from "lucide-react"
+import {ChevronRightIcon } from "lucide-react"
 
 export default function Projects() {
   const projects = [
