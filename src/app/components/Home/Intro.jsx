@@ -67,7 +67,7 @@ export default function Intro() {
       </div>
 
       {/* Intro Section */}
-      <div className="flex-1 flex flex-col md:grid md:grid-cols-2 max-w-7xl pl-8 pr-8 md:pl-0 md:pr-0 mt-20 mx-auto container">
+      <div className="flex-1 flex flex-col md:grid md:grid-cols-2 max-w-7xl pl-8 pr-8 md:pl-8 md:pr-8 lg:px-0 mt-20 mx-auto container">
         <div>
           <h1 className="text-3xl md:text-5xl font-bold text-primary">Empowering Students,</h1>
           <h1 className="text-3xl md:text-5xl font-bold text-primary">Building Community </h1>

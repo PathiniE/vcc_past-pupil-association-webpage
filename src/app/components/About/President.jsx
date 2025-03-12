@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function WhoWeAre() {
   return (
-    <div className="flex flex-col md:flex-row max-w-7xl h-auto pl-8 pr-8 sm:pl-0 sm:pr-0 container mx-auto">
+    <div className="flex flex-col md:flex-row max-w-7xl h-auto px-8  md:px-8 lg:px-0 container mx-auto">
       <div className="w-full md:w-1/2 pr-0 md:pr-8 mb-8 md:mb-0">
         <p className="text-sm font-medium mb-2 text-primary/80">President's Statement</p>
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-1 mt-4">

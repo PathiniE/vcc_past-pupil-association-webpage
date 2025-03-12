@@ -167,7 +167,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full mt-20">
-      <div className="max-w-7xl mx-auto container px-8 md:px-0">
+      <div className="max-w-7xl mx-auto container px-8 md:px-8 lg:px-0">
         
         {/* Logo Section - Separate */}
         <div className="flex mb-6">

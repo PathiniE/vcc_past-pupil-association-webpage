@@ -2,7 +2,7 @@ import {Link} from  "next-view-transitions";
 
 export default function AboutIntro() {
   return (
-    <div className="flex flex-col items-center justify-center text-center py-12 px-4 sm:px-6 lg:px-8 h-auto max-w-7xl mx-auto">
+    <div className="flex flex-col items-center justify-center text-center py-12 px-4 sm:px-6 lg:px-8  h-auto max-w-7xl mx-auto">
       <p className="text-sm font-medium mb-2 text-primary/80 ">About Us</p>
       
       <h1 className="text-3xl md:text-5xl font-bold text-primary mb-1 mt-4">

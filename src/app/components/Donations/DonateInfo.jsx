@@ -27,7 +27,7 @@ const DonateInfo = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto container px-8 md:px-0 min-h-fit">
+    <div className="max-w-7xl mx-auto container px-8  md:px-8 lg:px-0 min-h-fit">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Column - Content */}
         <div className="w-full lg:w-1/2 space-y-8">
@@ -74,7 +74,7 @@ const DonateInfo = () => {
 
         {/* Right Column - Form */}
         <div className="w-full lg:w-1/2">
-          <form className="space-y-6  md:p-8">
+          <form className="space-y-6 ">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Name

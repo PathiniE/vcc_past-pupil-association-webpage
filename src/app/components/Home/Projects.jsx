@@ -28,7 +28,7 @@ export default function Projects() {
   ]
 
   return (
-    <div className="w-full  max-w-7xl pl-8 pr-8 md:pl-0 md:pr-0 min-h-screen h-auto flex flex-col container mx-auto">
+    <div className="w-full  max-w-7xl pl-8 pr-8 md:px-8 lg:px-0 min-h-screen h-auto flex flex-col container mx-auto">
       <div className="mb-6">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary text-center sm:text-start">Our Featured Projects</h1>
         <p className="text-gray-600 mt-2 text-center sm:text-start">

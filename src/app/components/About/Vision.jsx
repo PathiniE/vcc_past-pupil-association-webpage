@@ -1,6 +1,6 @@
 export default function Vision() {
     return (
-      <div className="flex flex-col max-w-7xl  pl-8 pr-8 sm:pl-0 sm:pr-0 container mx-auto">
+      <div className="flex flex-col max-w-7xl px-8  md:px-8 lg:px-0 container mx-auto">
         <div className="flex flex-col md:flex-row mb-8 md:mb-0">
           <div className="w-full md:w-[30%] mb-4 md:mb-0">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-0">

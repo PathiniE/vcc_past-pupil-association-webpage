@@ -9,7 +9,7 @@ const contactInfo = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto container px-8 sm:px-0">
+    <div className="mx-auto container px-8 md:px-8 lg:px-0">
       <div className="max-w-7xl mx-auto space-y-8">
        
         <div className="grid md:grid-cols-2 md:gap-16 lg:gap-24">

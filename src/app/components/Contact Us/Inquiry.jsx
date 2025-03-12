@@ -120,7 +120,7 @@ export default function Inquiry() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row max-w-7xl px-8 sm:px-0 container mx-auto">
+    <div className="flex flex-col md:flex-row max-w-7xl px-8 md:px-8 lg:px-0 container mx-auto">
       <div className="w-full md:w-[40%] mb-8 md:mb-0">
         <p className="text-sm font-medium mb-2 text-primary/80">Inquiry</p>
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-1 mt-4">

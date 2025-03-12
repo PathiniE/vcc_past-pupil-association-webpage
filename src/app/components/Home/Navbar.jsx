@@ -83,7 +83,7 @@ export function Navbar() {
 
   return (
     <header className="relative border-b">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between container px-4 md:px-0">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between container px-4 md:px-8 lg:px-0">
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center gap-8">
           <Image src="/assets/Logo-vcc.png" alt="Logo" height={100} width={70}  />

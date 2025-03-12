@@ -19,7 +19,7 @@ export default function Account() {
   }
 
   return (
-    <div className="w-full md:max-w-7xl mx-auto container flex flex-col md:flex-row mt-10 px-8 md:px-0">
+    <div className="w-full md:max-w-7xl mx-auto container flex flex-col md:flex-row mt-10 px-8 md:px-8 lg:px-0">
       {/* Left Section - visible only on desktop */}
       <div className="hidden md:block md:w-[50%]">
         <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl text-primary">
