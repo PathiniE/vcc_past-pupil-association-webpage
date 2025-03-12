@@ -118,7 +118,7 @@ const News = () => {
       </div>
 
       {/* Mobile Layout - Horizontal Swipe */}
-      <div className="md:hidden">
+      <div className="md:hidden px-8">
         <div
           ref={scrollRef}
           className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory"
