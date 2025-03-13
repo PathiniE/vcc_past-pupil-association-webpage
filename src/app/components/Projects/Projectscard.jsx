@@ -1,75 +1,7 @@
-// import {Link } from 'next-view-transitions'
-// import Image from "next/image"
-
-
-// export default function Projectscard() {
-//   const projects = [
-//     {
-//       id: 1,
-//       name: "Project name here",
-//       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla dolor amet.",
-//       tags: ["Tag one", "Tag two", "Tag three"],
-//       image: "/assets/p1.jpg",
-//     },
-//     {
-//       id: 2,
-//       name: "Project name here",
-//       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla dolor amet.",
-//       tags: ["Tag one", "Tag two", "Tag three"],
-//       image: "/assets/p2.jpg",
-//     },
-//     {
-//       id: 3,
-//       name: "Project name here",
-//       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla dolor amet.",
-//       tags: ["Tag one", "Tag two", "Tag three"],
-//       image: "/assets/p3.jpg",
-//     },
-//   ]
-
-//   return (
-//     <div className="w-full  max-w-7xl pl-8 pr-8 md:px-8 lg:px-0 min-h-screen h-auto flex flex-col container mx-auto">
-//       <div className="flex flex-col gap-6 max-w-7xl container mx-auto">
-//         {projects.map((project) => (
-//           <div key={project.id} className="border-b-2 border-gray-300 flex flex-col md:flex-row flex-1 gap-4 pb-6">
-//             <div className="w-full md:w-1/2 transition-all hover:shadow-lg hover:-translate-y-1 hover:cursor-pointer ">
-//               <Image
-//                 src={project.image}
-//                 alt={project.name}
-//                 width={300}
-//                 height={200}
-//                 className="w-full h-[250px] object-cover rounded-md border-2 border-gray-200"
-//               />
-//             </div>
-//             <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4 ml-0 sm:ml-6">
-//               <h3 className="text-xl font-semibold text-primary">{project.name}</h3>
-//               <p className="text-gray-600 text-sm">{project.description}</p>
-//               <div className="flex flex-wrap gap-2">
-//                 {project.tags.map((tag, index) => (
-//                   <span key={index} className="px-3 py-1 text-xs bg-green-300/25 text-primary rounded-full">
-//                     {tag}
-//                   </span>
-//                 ))}
-//               </div>
-//               <Link
-//                 href={'/projects'}
-//                 className="text-primary hover:font-bold flex items-center text-sm gap-2"
-//               >
-//                 View Project
-//               </Link>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }
-
 
 
 "use client";
 import { useEffect, useState } from "react";
-import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { ChevronRightIcon, Loader2, ImageIcon } from "lucide-react";
 

@@ -66,44 +66,6 @@ export default function Account() {
             <label className="text-sm text-primary font-medium">Email</label>
             <Input type="email" placeholder="example@gmail.com" />
           </div>
-
-          <div className="space-y-2">
-            <label className="text-sm text-primary font-medium">Create Password</label>
-            <div className="relative">
-              <Input
-                type={showPassword ? "text" : "password"}
-                placeholder="••••••••"
-              />
-              <Button
-                type="button"
-                variant="ghost"
-                size="icon"
-                className="absolute right-0 top-0"
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-              </Button>
-            </div>
-          </div>
-
-          <div className="space-y-2">
-            <label className="text-sm text-primary font-medium">Confirm Password</label>
-            <div className="relative">
-              <Input
-                type={showConfirmPassword ? "text" : "password"}
-                placeholder="••••••••"
-              />
-              <Button
-                type="button"
-                variant="ghost"
-                size="icon"
-                className="absolute right-0 top-0"
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              >
-                {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-              </Button>
-            </div>
-          </div>
           
           {/* Mobile Next Button - visible only on mobile */}
           

@@ -102,11 +102,11 @@ export default function Academics() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="text-sm text-primary font-medium">From</label>
-                <Input placeholder="EX : 2019" />
+                <Input placeholder="EX : 2017" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm text-primary font-medium">To</label>
-                <Input placeholder="EX : 2017" />
+                <Input placeholder="EX : 2019" />
               </div>
             </div>
           </div>

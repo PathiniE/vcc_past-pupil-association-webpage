@@ -77,6 +77,17 @@ export default function Membership() {
     </div>
 
     <div>
+      <label htmlFor="refereeName" className="block text-sm font-medium text-primary">
+        Referee mobile number
+      </label>
+      <Input
+        id="refereeMobileNumber"
+        placeholder="EX : +94 XX XXX XXXX"
+        className="mt-1 w-full"
+      />
+    </div>
+
+    <div>
       <label htmlFor="refereeNumber" className="block text-sm font-medium text-primary">
         Referee Membership No:
       </label>
