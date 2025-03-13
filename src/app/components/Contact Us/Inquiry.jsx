@@ -78,7 +78,7 @@ export default function Inquiry() {
           from_email: formData.email,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC
       );
 
       console.log("Email sent successfully:", response);
