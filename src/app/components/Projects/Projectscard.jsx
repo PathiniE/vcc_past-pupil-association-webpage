@@ -141,7 +141,7 @@ export default function ProjectsCard() {
   };
 
   return (
-    <div className="w-full max-w-7xl pl-8 pr-8 md:px-8 lg:px-0 min-h-screen h-auto flex flex-col container mx-auto">
+    <div className="w-full max-w-7xl px-8 md:px-8 lg:px-0  min-h-screen h-auto flex flex-col container mx-auto">
       <div className="flex flex-col gap-6 max-w-7xl container mx-auto">
         {displayPosts.map((post, index) => (
           <div key={post.id || index} className="border-b-2 border-gray-300 flex flex-col md:flex-row flex-1 gap-4 pb-6">

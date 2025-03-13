@@ -151,7 +151,7 @@ export default function CardComp() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto container grid grid-cols-1 sm:grid-cols-12 gap-10 pl-8 pr-8 md:pl-0 md:pr-0">
+    <div className="max-w-7xl mx-auto container grid grid-cols-1 sm:grid-cols-12 gap-10 px-8  md:px-8 lg:px-0 ">
       {/* First Card */}
       <div className="col-span-1 sm:col-span-6">
         <Card className="h-full flex flex-col">

@@ -125,7 +125,7 @@ export default function FacebookGallery() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center text-center pl-8 pr-8 sm:pl-0 sm:pr-0 max-w-7xl mx-auto container">
+    <div className="flex flex-col items-center justify-center text-center px-8 md:px-8 lg:px-0  max-w-7xl mx-auto container">
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-2 md:gap-4 w-full">
         {displayPosts.map((post, index) => {
           const imageSrc = getPostImageSrc(post);
