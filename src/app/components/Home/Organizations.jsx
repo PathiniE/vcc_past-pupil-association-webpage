@@ -115,7 +115,7 @@ export default function Organizations() {
     // Check if window is defined (client-side)
     if (typeof window !== 'undefined') {
       const checkScreenSize = () => {
-        setIsSmallScreen(window.innerWidth < 1024); // Now checking against lg breakpoint (1024px)
+        setIsSmallScreen(window.innerWidth < 1024); 
       };
       
       // Initial check
